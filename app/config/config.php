@@ -12,4 +12,4 @@ define('APPROOT',  dirname(dirname(__FILE__)));
 // URL ROOT
 define("URLROOT", 'http://localhost/sharepost/');
 // SITE NAME
-define("SITENAME", 'Sharepost');
+define("SITENAME", 'Share Quotes');
