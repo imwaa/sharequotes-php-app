@@ -4,6 +4,8 @@ require_once 'config/config.php';
 
 //LOAD HELPERS
 require_once 'helpers/url_helper.php';
+require_once 'helpers/session_helper.php';
+
 
 // AUTOLOAD CORE LIBRARIES
 // IL REQUIRE LES LIBRARIES NECESSAIRES AUTOMATIQUEMENT

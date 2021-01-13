@@ -4,6 +4,7 @@
 <div class="row mt-5">
     <div class="col-md-6 mx-auto">
         <div class="card card-body mt-5">
+            <?php flash('register_success'); ?>
             <h2>Login</h2>
             <p>Please fill in your credentials to log in</p>
             <form class="mt-4" action="<?php echo URLROOT; ?>/users/login" method="post">
