@@ -32,7 +32,7 @@
                         <input type="submit" value="Register" class="btn btn-primary btn-block">
                     </div>
                     <div class="col-5">
-                        <a href="<?php echo URLROOT; ?>/users/login" class="btn  btn-block">Have an account? Login</a>
+                        <a href="<?php echo URLROOT; ?>/users/login" class="btn btn-light  btn-block">Have an account? Login</a>
                     </div>
                 </div>
             </form>
