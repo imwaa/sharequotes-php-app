@@ -4,6 +4,7 @@ class Users extends Controller
 {
     public function __construct()
     {
+        $this->userModel = $this->model('User');
     }
 
     public function register()
@@ -28,6 +29,11 @@ class Users extends Controller
             // Validate Email
             if (empty($data['email'])) {
                 $data['email_err'] = 'Please enter email';
+            } else {
+                //CHECK EMAIL
+                if ($this->userModel->findUserByEmail($data['email'])) {
+                    $data['email_err'] = 'Êmail alredy taken';
+                }
             }
 
             // Validate Name
