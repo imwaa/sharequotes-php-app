@@ -139,6 +139,13 @@ class Posts extends Controller
     public function delete($id)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $post = $this->postModel->getPostById($id);
+            //CHECK FOR OWNER
+            if ($post->user_id != $_SESSION['user_id']) {
+                redirect('posts');
+            }
+
             if ($this->postModel->deletePost($id)) {
                 flash('post_message', 'Quote delete successfully');
                 redirect('posts/myposts');
