@@ -10,6 +10,6 @@ define('DB_NAME', 'sharepost');
 // APP ROOT
 define('APPROOT',  dirname(dirname(__FILE__)));
 // URL ROOT
-define("URLROOT", 'http://localhost/sharepost/');
+define("URLROOT", 'http://localhost/sharepost');
 // SITE NAME
 define("SITENAME", 'Share Quotes');

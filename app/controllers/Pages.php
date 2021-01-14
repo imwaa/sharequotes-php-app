@@ -8,9 +8,12 @@ class Pages extends Controller
 
     public function index()
     {
+        if (isLoggedIn()) {
+            redirect('posts');
+        }
 
         $data = [
-            'title' => 'Sharepost',
+            'title' => 'Share Quotes',
         ];
 
         $this->view('pages/index', $data);

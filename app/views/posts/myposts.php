@@ -24,27 +24,28 @@
         left: 50px;
     }
 
-    .add_quote {
+    .edit {
         position: absolute;
-        top: 18%;
-        left: 72%;
+        top: -50px;
+        left: 370px;
+    }
+
+    .delete {
+        position: absolute;
+        top: -50px;
+        left: 270px;
     }
 </style>
-
-
-
-
-
-<a href="<?php echo URLROOT; ?>/posts/add" class="btn btn-primary btn-lg add_quote">
-    <i class="fas fa-feather"> </i> Add Quote
-</a>
 
 <div class="container mt-4">
 
 
     <div class="row">
         <div class="col-lg-8 mx-auto">
-            <h3 class="mb-4">Lastest quotes added</h3>
+            <h3 class="mt-4 mb-4">My Quotes</h3>
+        </div>
+        <div class="col-lg-8 mx-auto">
+            <?php flash('post_message'); ?>
         </div>
         <?php foreach ($data['posts'] as $post) : ?>
             <div class="col-lg-8 mx-auto">
@@ -62,8 +63,17 @@
                 </blockquote><!-- END -->
 
                 <div class="row">
+
                     <div class="col">
-                        <span class="badge btn-lg badge-primary user-created"><i class="fas fa-user-tie"></i> <?php echo $post->name; ?></span>
+                        <span class="badge badge-primary btn-lg user-created"><i class="fas fa-user-tie"></i> <?php echo $post->name; ?></span>
+                    </div>
+                    <div class="col">
+                        <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $post->postId; ?>" class="btn btn-lg btn-success edit"><i class="fas fa-pen-nib"></i></i></a>
+                    </div>
+                    <div class="col">
+                        <form action="<?php echo URLROOT; ?>/posts/delete/<?php echo $post->postId; ?>" method="post">
+                            <button class="btn btn-lg btn-danger delete" type=" submit"><i class="fas fa-trash"></i></button>
+                        </form>
                     </div>
                     <div class="col">
                         <footer class="blockquote-footer pt-2 float-right">

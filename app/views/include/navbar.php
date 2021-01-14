@@ -8,11 +8,12 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
+                    <a class="nav-link active ml-4" href="<?php echo URLROOT; ?>"><i class="fas fa-quote-right"></i> Quotes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">About</a>
+                    <a class="nav-link active" href="<?php echo URLROOT; ?>/posts/myposts"><i class="fas fa-feather-alt"></i></i> My Quotes</a>
                 </li>
+
             </ul>
 
             <ul class="navbar-nav ml-auto">
@@ -21,14 +22,14 @@
                         <a class="nav-link">Hi, <?php echo $_SESSION['user_name']; ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo URLROOT; ?>users/logout">Logout</a>
+                        <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
                     </li>
                 <?php else : ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo URLROOT; ?>users/login">Login</a>
+                        <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo URLROOT; ?>users/register">register</a>
+                        <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">register</a>
                     </li>
                 <?php endif; ?>
             </ul>
