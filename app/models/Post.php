@@ -73,7 +73,7 @@ class Post
 
     public function updatePost($data)
     {
-        //QUERY TO ADD POST
+        //QUERY TO UPDATE POST
         $this->db->query('UPDATE posts SET body = :body, author = :author WHERE id = :id');
         //BIND VALUES
         $this->db->bind(':id', $data['id']);
@@ -90,5 +90,16 @@ class Post
 
     public function deletePost($id)
     {
+        //QUERY TO ADD POST
+        $this->db->query('DELETE FROM posts WHERE id = :id');
+        //BIND VALUES
+        $this->db->bind(':id', $id);
+
+        //EXECUTE
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
