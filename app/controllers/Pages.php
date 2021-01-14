@@ -16,7 +16,7 @@ class Pages extends Controller
             'title' => 'Share Quotes',
         ];
 
-        $this->view('pages/index', $data);
+        $this->view('users/login', $data);
     }
 
     public function about()
